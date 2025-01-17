@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>Documents.Providers.FileNetCEDotNET</RootNamespace>
+    <TargetFramework>net48</TargetFramework>
+    <Title>Ecmg.Documents.Providers.FileNetCEDotNET</Title>
+    <Authors>magbender</Authors>
+    <Company>Conteage</Company>
+    <Description>A .NET library for for connecting to a FileNet P8 repository and interacting with documents, folders and custom objects.</Description>
+    <Copyright>Conteage Corp</Copyright>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseExpression>GPL-3.0-only</PackageLicenseExpression>
+    <Version>1.0.2</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Documents\Ecmg.Documents.vbproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="FileNet.Api">
+      <HintPath>Dependencies\FileNet.Api.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Extensions\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="README.md">
+      <PackagePath>\</PackagePath>
+      <Pack>True</Pack>
+    </None>
+  </ItemGroup>
+
+</Project>
